@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recapitulando - Confirmação</title>
+</head>
+<body>
+
+    <h1> Clique no botão para exibir o valor digitado.</h1>
+
+    <input type="text" id="texto">  
+    <input type="button" id="botao" value="Ok">
+
+    <h2 id="root"> </h2>
+    <script>
+        function printar() {
+            if(texto.value){
+                res.innerText = texto.value
+            } else {
+                res.innerText = 'Você não escreveu nada...'
+            };
+        }
+
+        const texto = document.querySelector('#texto');
+        const botao = document.querySelector('#botao');
+        const res = document.querySelector('#root');
+
+        botao.addEventListener('click', printar);
+    </script>
+</body>
+</html>

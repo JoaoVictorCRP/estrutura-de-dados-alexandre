@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recapitulando - Alert</title>
+</head>
+<body>
+    
+
+    <button type="button" id="botao1">Clique aqui</button>
+
+    <script>
+        function alertar () {
+            alert('Você clicou!');
+        }   
+
+        const botao = document.querySelector('#botao1');
+        botao.addEventListener('click', alertar);
+    </script>
+</body>
+</html>
