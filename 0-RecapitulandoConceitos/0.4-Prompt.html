@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recapitulando - Confirmação</title>
+</head>
+<body>
+
+    <h1>Este é o arquivo do prompt</h1>
+
+    <button id="multiplicador">Multiplicar</button>
+
+
+    <h2 id="root"> </h2>
+    <script>
+        // function printar() {
+        //     if(texto.value){
+        //         res.innerText = texto.value
+        //     } else {
+        //         res.innerText = 'Você não escreveu nada...'
+        //     };
+        // }
+        function multiplicar(){
+            let res;
+            const x = Number(prompt('1º Número:'));
+            const y = Number(prompt('2º Número:'));
+            
+            if(!x && !y){
+                res = 'Valor indefinido';
+            } else {
+                res = x * y;
+            };
+
+            alert(`O resultado é: ${res}`);
+        };
+        const botaoMultiplicacao = document.querySelector('#multiplicador');
+        
+        botaoMultiplicacao.addEventListener('click', multiplicar)
+    </script>
+</body>
+</html>
