@@ -15,7 +15,7 @@ function buscaSequencial(vetor, valorBusca){
 
 
 // 2) Busca no vetor importado
-import { nomes } from './data/vetor-nomes.mjs';
+import { nomes } from '../data/vetor-nomes.mjs';
 console.log(`Posição de ALEXANDRE: ${buscaSequencial(nomes, "ALEXANDRE")}`);
 console.log(`Posição de JOAO: ${buscaSequencial(nomes, "JOAO")}`);
 console.log(`Posição da VICTOR: ${buscaSequencial(nomes, "VICTOR")}`);

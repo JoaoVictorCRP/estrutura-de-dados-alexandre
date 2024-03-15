@@ -1,6 +1,6 @@
 // Vamos ver agora sobre o funcionamento da busca sequencial em objetos.
 
-import { objNomes } from './data/vetor-obj-nomes.mjs';
+import { objNomes } from '../data/vetor-obj-nomes.mjs';
 
 function buscaSequencial(vetor, funcaoExterna){
     // Realiza a busca, com base numa função externa de comparação

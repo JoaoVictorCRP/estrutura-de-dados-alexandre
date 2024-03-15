@@ -14,7 +14,6 @@ function buscaBinaria(valorBusca, vetor){
         } else {
             fim = meio-1 // O meio do vetor é maior que o valor buscado, ande para a esquerda.
         }
-    
     };
     return -1 // Não foi encontrado...
 }
@@ -22,7 +21,8 @@ function buscaBinaria(valorBusca, vetor){
 const nums = [0, 11, 22, 33, 44, 55, 66, 77, 88, 99];
 
 console.log(`Posição de 33: ${buscaBinaria(33, nums)}`)
-
+console.log(`Posição de 11: ${buscaBinaria(33, nums)}`)
+console.log(`Posição de 88: ${buscaBinaria(33, nums)}`)
 
 // Melhor caso:
 // Binária --> Elemento do meio
