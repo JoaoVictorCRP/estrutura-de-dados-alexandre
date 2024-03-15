@@ -5,7 +5,7 @@ function buscaBinaria(valorBusca, vetor){
     let fim = vetor.length - 1;
     comps = 0;
 
-    while(fim>=inicio){ 
+    while(inicio<=fim){ 
         comps++
         let meio = Math.floor((inicio+fim)/2) // Pegando o meio do vetor
         
@@ -24,8 +24,9 @@ function buscaBinaria(valorBusca, vetor){
     return -1 // Não foi encontrado...
 }
 
+// EXEMPLO COM NÚMEROS:
 // const nums = [0, 11, 22, 33, 44, 55, 66, 77, 88, 99];
-// console.log(`Posição de 33: ${buscaBinaria(33, nums)}`)
+// console.log(`Posição de 33: ${buscaBinaria(33, nums)}, Comparações realizadas: ${comps}``)
 
 import {nomes} from '../data/vetor-nomes.mjs'
 console.log(`Posição de ALEXANDRE: ${buscaBinaria('ALEXANDRE', nomes)}, Comparações realizadas: ${comps}`)
