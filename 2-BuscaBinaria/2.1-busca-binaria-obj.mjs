@@ -19,17 +19,15 @@ function buscaBinaria(vetor, funcaoExterna){
     };
 };
 
-function comparar(valorMeio){
+function comparar(valorMeio, nomeBuscado='ALEXANDRE'){
     /* Função de comparação
-    
+
         Retorna 0 ~~> Se o valor do meio do vetor for igual a "ALEXANDRE"
         Retorna 1 ~~> Se o valor do meio do vetor for maior (alfabeticamente) que "ALEXANDRE"
         Retorna -1 ~~> Caso o nome "ALEXANDRE" não exista.
     */
-    if('ALEXANDRE' === valorMeio.first_name) return 0;
-    
-    else if ('ALEXANDRE' > valorMeio.first_name) return 1;
-
+    if(nomeBuscado === valorMeio.first_name) return 0;
+    else if (nomeBuscado > valorMeio.first_name) return 1;
     else return -1;
 };
 
