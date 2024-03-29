@@ -26,3 +26,6 @@ let nums = [77,44,22,33,99,55,88,0,66,11];
 console.log(`Vetor ordenado: ${bubbleSort(nums)}`);
 console.log(`Comparações: ${comps}`)
 console.log(`Trocas: ${trocas}`)
+
+let memoria = process.memoryUsage().heapUsed / 1024 / 1024 // Método do node para ver quanto o programa usou de memória
+console.log(`Gastou ${memoria.toFixed(2)}MB de memória`)
