@@ -3,10 +3,8 @@ function mergeSort(array){
     let meio = Math.floor(array.length/2)
     // Divindo o vetor
     let vetEsq = array.slice(0, meio)
-    let vetDir = array.slice(meio) // quando não há segundo parâmetro, já pega até o final
+    let vetDir = array.slice(meio) // Obs: quando não há segundo parâmetro, já pega até o final
 
-    console.log(`Vetor Esquerdo: ${vetEsq}`)
-    console.log(`Vetor Direito: ${vetDir}`)
 
     vetEsq = mergeSort(vetEsq)
     vetDir = mergeSort(vetDir)
@@ -16,7 +14,7 @@ function mergeSort(array){
     let vetRes = [];
     
     while(posEsq < vetEsq.length && posDir < vetDir.length){
-        if(vetEsq[posEsq] < vetDir[posDir]){
+        if(vetEsq[posEsq] < vetDir[posDir]){ // Aqui é uma corrida de arrays, o que tiver números menores vence
             vetRes.push(vetEsq[posEsq])
             posEsq++
         } else {
@@ -24,20 +22,21 @@ function mergeSort(array){
             posDir++
         }
     }
+    console.log(`Vetor esquerdo: ${vetEsq} \nVetor Direito: ${vetDir}`)
     let sobra
-    if(posEsq < posDir){
-        sobra = vetEsq[posEsq]
+    if(posEsq < posDir){  // O array perdedor da corrida (array mais pesado) será adicionado aqui como sobra.
+        sobra = vetEsq.slice(posEsq)
     } else {
-        sobra= vetDir[posDir]
+        sobra= vetDir.slice(posDir)
     }
-    vetRes.push(sobra);
-    console.log(`Estou assim: ${vetRes}`)
-    return vetRes
+    console.log(`No momento, vetor de resultado está assim: ${vetRes}`)
+    console.log(`A sobra (números maiores) está assim: ${sobra}\n`)
+    return [...vetRes, ...sobra]
 }
 
 
 
-const nums = [7,3,2,16,24,4,11,9]
+const nums = [7,3,2,78,16,24,4,11,9]
 const numsOrdenados = mergeSort(nums)
 
 console.log(`A lista ordenada é: ${numsOrdenados}`)
