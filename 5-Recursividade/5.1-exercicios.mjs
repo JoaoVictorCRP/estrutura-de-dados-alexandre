@@ -7,7 +7,7 @@ function somatorio(n){
     }
 }
 
-console.log(`Somatória de 5: ${somatorio(5)}`)
+console.log(`Somatória de 5: ${somatorio(5)}\n`)
 
 // 2. Faça uma função recursiva que receba um número inteiro positivo par N e imprima utilizando console.log(), todos os números
 // pares de 0 até N em ordem decrescente.
@@ -19,6 +19,6 @@ function devolvePares(n){
     }
     devolvePares(n-1);
 };
-
-
-devolvePares(20)
+const foo = 20
+console.log(`Os numeros pares de 0 à ${foo} é:`)
+devolvePares(20);
