@@ -1,8 +1,8 @@
-function quickSort(vetor, ini = 0, fim = vetor.length-1){
-    if(fim<=ini) return; // Caso base
+function quickSort(vetor, ini=0, fim= vetor.length-1){
+    if(fim<=ini) return;
 
     const pivot = fim; // O pivot pode ser qualquer posição
-    console.log(`o pivot é: ${pivot}`)
+    // console.log(`o pivot é: ${pivot}`)
     let div = ini - 1;
 
     for(let i=ini; i<fim; i++){
@@ -23,11 +23,12 @@ function quickSort(vetor, ini = 0, fim = vetor.length-1){
 
     quickSort(vetor, ini, div-1) // Menores que o pivot (esquerda)
     quickSort(vetor, div+1, fim) // Maiores que o pivot (direita)
-};
 
-const nums = [2,5,7,1,6,3,4]
-// const nums = [3,4,2,1]
+}
 
-quickSort(nums)
+import {nomes} from '../data/nomes-desord.mjs'
 
-console.log(nums)
+quickSort(nomes)
+let memoria = process.memoryUsage().heapUsed / 1024 / 1024 // Método do node para ver quanto o programa usou de memória
+console.log(nomes)
+console.log(`Memória utilizada: ${memoria.toFixed(2)}MB`) // Bem rápido, PORÉM, consome bastante memória.
