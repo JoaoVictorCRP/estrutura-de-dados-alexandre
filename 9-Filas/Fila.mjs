@@ -10,7 +10,7 @@ export default class Queue {
     };
 
     retirar(){
-        this.#data.shift()
+        return this.#data.shift()
     };
 
     espiar(){
@@ -18,7 +18,7 @@ export default class Queue {
     };
 
     get estaVazia(){
-        return this.#data.lenth === 0;
+        return this.#data.length === 0;
     };
 
     print(){
@@ -27,7 +27,7 @@ export default class Queue {
             if(output !== '[\n'){
                 output += ',\n'
             };
-            output += ` [${i}] guarda o valor ${this.#data[i]}`
+            output += `    [${i}] guarda o valor ${this.#data[i]}`
         }
 
         console.log(output + '\n]')
