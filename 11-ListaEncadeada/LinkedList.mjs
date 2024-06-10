@@ -101,5 +101,5 @@ export default class LinkedList{
 
     get peek(){
         return console.log(`A cabeça contém: ${this.#head} \nA cauda contém: ${this.#tail} `)
-    }
+    };
 };
