@@ -100,6 +100,39 @@ export default class LinkedList{
     }
 
     get peek(){
-        return console.log(`A cabeça contém: ${this.#head} \nA cauda contém: ${this.#tail} `)
+        return console.log(`A cabeça contém: ${this.#head.data}\nA cauda contém: ${this.#tail.data}`)
     };
+
+    peekPos(pos){
+        // Posição invalida
+        if(pos<0){
+            return undefined
+        }
+        // Primeira posição
+        if(pos===0){
+            return console.log(this.#head.data)
+        }
+        // última posição
+        if(pos===this.#count){
+            return console.log(this.#tail.data)
+        }
+        // Lista está vazia
+        if( this.isEmpty ){
+            return console.log(`A LL está vazia`)
+        }
+
+        // Posição além do limite da LL
+        if(pos>this.#count){
+            return console.log(`\nA LL não possui um tamanho de ${pos} nodos. \
+                \nNo entanto, na última posição (${this.#count}), temos ${this.#tail.data}`)
+        }
+
+        // Posição no meio
+        let selected =this.#head;
+        for(let i=1;i<=pos;i++){
+            selected = selected.next
+        }
+        
+        return console.log(selected.data);
+    }
 };
