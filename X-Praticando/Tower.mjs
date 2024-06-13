@@ -1,8 +1,10 @@
-export default class Stack{
+export default class Tower {
+    name;
     #data = [];
 
     
-    constructor(data, ){
+    constructor(name, data){
+        this.name = name;
         this.#data = []
     };
 

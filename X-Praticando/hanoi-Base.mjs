@@ -2,6 +2,9 @@
 // n -> numero de discos
 // source -> haste de origem
 // auxiliary -> haste auxiliar
+
+import Stack from "../8-Pilhas/Pilha.mjs";
+
 // target -> haste alvo
 let movimentos = 0;
 
@@ -11,12 +14,16 @@ function towerOfHanoi(n, source, auxiliary, target) {
         movimentos++;
         return;
     }
-    towerOfHanoi(n-1, source, target, auxiliary); movimentos++; // Utilizaremos a haste alvo como auxiliar
+    towerOfHanoi(n-1, source, target, auxiliary); movimentos++; // Se há mais de um disco, move-se o disco de cima para a torre auxiliar.
     console.log(`Movendo o disco ${n} da torre ${source} para a torre ${target}...`)
     towerOfHanoi(n-1, auxiliary, source, target); // Disco 1 estará agora no haste auxiliar
+
 }
 
+
+
 const nDisks = 4
+
 towerOfHanoi(nDisks, 'A','B','C')
 console.log(`Total de movimentos: ${movimentos}`)
 
